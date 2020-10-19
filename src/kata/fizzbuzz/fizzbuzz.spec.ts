@@ -30,4 +30,7 @@ describe('fizzbuzz kata', () => {
     it("should return Fizz when number is 12", () => {
         expect(fizzbuzz(12)).toBe("Fizz")
     })
+    it("should return Buzz when number is 20", () => {
+        expect(fizzbuzz(20)).toBe("Buzz")
+    })
 })
