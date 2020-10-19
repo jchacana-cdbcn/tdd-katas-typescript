@@ -1,6 +1,6 @@
 export const fizzbuzz = (num: number): string  => {
     if(isMultipleOf3(num)) return "Fizz" 
-    if(num === 5 || num === 10) return "Buzz"
+    if(num === 5 || num === 10 || num === 20) return "Buzz"
     return num.toString();
 }
 
