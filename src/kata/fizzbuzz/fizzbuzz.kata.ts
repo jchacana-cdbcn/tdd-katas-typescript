@@ -1,7 +1,8 @@
 export const fizzbuzz = (num: number): string  => {
-    if(isMultipleOf15(num)) return "FizzBuzz"
-    if(isMultipleOf3(num)) return "Fizz" 
-    if(isMultipleOf5(num)) return "Buzz"
+    let fbz = ""
+    if(isMultipleOf3(num)) fbz += "Fizz" 
+    if(isMultipleOf5(num)) fbz += "Buzz"
+    if(fbz.length !== 0) return fbz
     return num.toString();
 }
 
@@ -11,8 +12,3 @@ const isMultipleOf3 = (num: number): boolean => {
 const isMultipleOf5 = (num: number): boolean => {
     return num % 5 === 0;
 }
-
-function isMultipleOf15(num: number) {
-    return isMultipleOf3(num) && isMultipleOf5(num)
-}
-
