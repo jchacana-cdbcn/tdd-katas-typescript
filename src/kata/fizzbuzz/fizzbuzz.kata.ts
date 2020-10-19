@@ -1,5 +1,9 @@
 export const fizzbuzz = (num: number): string  => {
-    if(num === 3 || num === 6 || num === 9) return "Fizz"
+    if(isMultipleOf3(num)) return "Fizz" 
     if(num === 5) return "Buzz"
     return num.toString();
+}
+
+const isMultipleOf3 = (num: number): boolean => {
+    return num % 3 === 0;
 }
