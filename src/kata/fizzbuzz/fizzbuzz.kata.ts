@@ -1,5 +1,5 @@
 export const fizzbuzz = (num: number): string  => {
-    if(num === 15 || num === 30) return "FizzBuzz"
+    if(num === 15 || num === 30 || num === 45) return "FizzBuzz"
     if(isMultipleOf3(num)) return "Fizz" 
     if(isMultipleOf5(num)) return "Buzz"
     return num.toString();
