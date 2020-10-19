@@ -24,4 +24,10 @@ describe('fizzbuzz kata', () => {
     it("should return Buzz when number is 10", () => {
         expect(fizzbuzz(10)).toBe("Buzz")
     })
+    it("should return 11 when number is 11", () => {
+        expect(fizzbuzz(11)).toBe("11")
+    })
+    it("should return Fizz when number is 12", () => {
+        expect(fizzbuzz(12)).toBe("Fizz")
+    })
 })
