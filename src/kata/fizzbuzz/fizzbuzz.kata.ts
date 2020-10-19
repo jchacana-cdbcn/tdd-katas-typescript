@@ -1,14 +1,11 @@
 export const fizzbuzz = (num: number): string  => {
     let fbz = ""
-    if(isMultipleOf3(num)) fbz += "Fizz" 
-    if(isMultipleOf5(num)) fbz += "Buzz"
+    if(isMultipleOf(num, 3)) fbz += "Fizz" 
+    if(isMultipleOf(num, 5)) fbz += "Buzz"
     if(fbz.length !== 0) return fbz
     return num.toString();
 }
 
-const isMultipleOf3 = (num: number): boolean => {
-    return num % 3 === 0;
-}
-const isMultipleOf5 = (num: number): boolean => {
-    return num % 5 === 0;
+const isMultipleOf = (num: number, multiple: number): boolean => {
+    return num % multiple === 0;
 }
