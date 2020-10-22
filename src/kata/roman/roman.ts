@@ -5,10 +5,13 @@ export class Roman {
         let result = "";
         let nearest: number = this.getNearestNumber(num);
         if(num >= nearest) {
+            const newNearest = this.getNearestNumber(num + 1);
+            if(newNearest - 1 === num) {
+                return this.getNearestSymbol(1) + this.convert(num + 1);
+            }
             num -= nearest;
             return this.getNearestSymbol(nearest) + this.convert(num);
         }
-        //if(num === 4 || num === 9) return "I" + this.convert(num + 1);
         return result;
     }
 
