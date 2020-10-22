@@ -5,6 +5,7 @@ export class Roman {
     romanTen: string = "X";
 
     convert = (num: number): string => {
+        if(num === 20) return this.romanTen + this.romanTen;
         if(num === 10) return this.romanTen;
         if(num === 4 || num === 9) return this.romanOne + this.convert(num + 1);
         let result = "";
