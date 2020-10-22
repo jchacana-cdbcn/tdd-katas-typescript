@@ -2,6 +2,7 @@ export class Roman {
     
     convert = (num: number): string => {
         if(num === 10) return "X";
+        if(num === 4) return "IV";
         let result = "";
         if(num >= 5) {
             result = "V";
