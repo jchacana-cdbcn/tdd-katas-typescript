@@ -12,9 +12,9 @@ describe("Roman converter ", () => {
     it("should return III for 3", () => {
         expect(roman.convert(3)).toBe("III");
     });
-    // it("should return IV for 4", () => {
-    //     expect(roman.convert(4)).toBe("IV");
-    // });
+    it("should return IV for 4", () => {
+        expect(roman.convert(4)).toBe("IV");
+    });
     it("should return V for 5", () => {
         expect(roman.convert(5)).toBe("V");
     });
@@ -24,9 +24,9 @@ describe("Roman converter ", () => {
     it("should return VII for 7", () => {
         expect(roman.convert(7)).toBe("VII")
     });
-    // it("should return IX for 9", () => {
-    //     expect(roman.convert(9)).toBe("IX");
-    // });
+    it("should return IX for 9", () => {
+        expect(roman.convert(9)).toBe("IX");
+    });
     it("should return X for 10", () => {
         expect(roman.convert(10)).toBe("X");
     })
