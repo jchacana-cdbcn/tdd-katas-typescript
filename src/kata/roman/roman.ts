@@ -1,10 +1,11 @@
 export class Roman {
     
     convert = (num: number): string => {
-        if(num === 5) return "V";
-        if(num === 6) return "VI";
-        if(num === 7) return "VII";
         let result = "";
+        if(num >= 5) {
+            result = "V";
+            num -= 5;
+        }
         for(let i = 0; i < num; i++) {
             result += "I";
         }

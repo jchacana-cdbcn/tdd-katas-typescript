@@ -17,11 +17,14 @@ describe("Roman converter ", () => {
     });
     it("should return V for 5", () => {
         expect(roman.convert(5)).toBe("V");
-    })
+    });
     it("should return VI for 6", () => {
         expect(roman.convert(6)).toBe("VI");
-    })
+    });
     it("should return VII for 7", () => {
         expect(roman.convert(7)).toBe("VII")
-    })
+    });
+    it("should return VIIII for 9", () => {
+        expect(roman.convert(9)).toBe("VIIII");
+    });
 })
