@@ -42,6 +42,9 @@ describe("Roman converter ", () => {
     it("should return XL for 40", () => {
         expect(roman.convert(40)).toBe("XL");
     })
+    it("should return XLV for 45", () => {
+        expect(roman.convert(45)).toBe("XLV");
+    })
     it("should return L for 50", () => {
         expect(roman.convert(50)).toBe("L");
     })
