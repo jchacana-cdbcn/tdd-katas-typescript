@@ -1,19 +1,19 @@
 
 export class Roman {
     
-    convert = (num: number): string => {
-        let result = "";
-        let nearest: number = this.getNearestNumber(num);
-        if(num >= nearest) {
-            const nearestUnit = this.getNearestUnit(num);
-            const newNearest = this.getNearestNumber(num + nearestUnit);
-            if(newNearest - nearestUnit === num) {
-                return this.getNearestSymbol(nearestUnit) + this.convert(num + nearestUnit);
+    convert = (decimal: number): string => {
+        let roman = "";
+        let nearest: number = this.getNearestNumber(decimal);
+        if(decimal >= nearest) {
+            const nearestUnit = this.getNearestUnit(decimal);
+            const newNearest = this.getNearestNumber(decimal + nearestUnit);
+            if(newNearest - nearestUnit === decimal) {
+                return this.getNearestSymbol(nearestUnit) + this.convert(newNearest);
             }
-            num -= nearest;
-            return this.getNearestSymbol(nearest) + this.convert(num);
+            decimal -= nearest;
+            return this.getNearestSymbol(nearest) + this.convert(decimal);
         }
-        return result;
+        return roman;
     }
 
     private getNearestNumber(num: number): number {
