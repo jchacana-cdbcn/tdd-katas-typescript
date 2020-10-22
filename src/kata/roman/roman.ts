@@ -2,13 +2,11 @@
 export class Roman {
     
     convert = (decimal: number): string => {
-        let roman = "";
         let nearest: number = this.getNearestNumber(decimal);
         if(decimal >= nearest) {
-            decimal -= nearest;
-            return this.getNearestSymbol(nearest) + this.convert(decimal);
+            return this.getNearestSymbol(nearest) + this.convert(decimal - nearest);
         }
-        return roman;
+        return "";
     }
 
     getNearestNumber = (num: number): number => {
