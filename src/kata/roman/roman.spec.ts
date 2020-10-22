@@ -16,6 +16,9 @@ describe("Roman converter ", () => {
         expect(roman.convert(4)).toBe("IIII");
     });
     it("should return V for 5", () => {
-        expect(roman.convert(5)).toBe("V")
+        expect(roman.convert(5)).toBe("V");
+    })
+    it("should return VI for 6", () => {
+        expect(roman.convert(6)).toBe("VI");
     })
 })
