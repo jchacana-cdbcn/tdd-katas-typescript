@@ -27,4 +27,7 @@ describe("Roman converter ", () => {
     it("should return VIIII for 9", () => {
         expect(roman.convert(9)).toBe("VIIII");
     });
+    it("should return X for 10", () => {
+        expect(roman.convert(10)).toBe("X");
+    })
 })
