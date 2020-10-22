@@ -16,12 +16,14 @@ export class Roman {
     }
 
     private getNearestNumber(num: number) {
+        if(num >= 50) return 50;
         if(num >= 10) return 10;
         if(num >= 5) return 5;
         return 1;
     }
 
     private getNearestSymbol(num: number) {
+        if(num === 50) return "L";
         if(num === 10) return "X";
         if(num === 5) return "V";
         return "I";
