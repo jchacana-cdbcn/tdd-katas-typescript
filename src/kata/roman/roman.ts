@@ -1,20 +1,29 @@
+interface MyEnum {
+    [key: number]: string
+}
+
+var romanToDecimal: MyEnum = {
+    1: "I",
+    5: "V",
+    10: "X"
+}
+
 export class Roman {
     
-    romanOne: string = "I";
-    romanFive: string = "V";
-    romanTen: string = "X";
-
     convert = (num: number): string => {
-        if(num === 20) return this.romanTen + this.romanTen;
-        if(num === 10) return this.romanTen;
-        if(num === 4 || num === 9) return this.romanOne + this.convert(num + 1);
         let result = "";
+        while(num >= 10) {
+            result += romanToDecimal[10];
+            num -= 10;
+        }
+        if(num === 4 || num === 9) return romanToDecimal[1] + this.convert(num + 1);
         if(num >= 5) {
-            result = this.romanFive;
+            result = romanToDecimal[5];
             num -= 5;
         }
-        for(let i = 0; i < num; i++) {
-            result += this.romanOne;
+        while(num >= 1) {
+            result += romanToDecimal[1];
+            num -= 1;
         }
         return result;
     }
