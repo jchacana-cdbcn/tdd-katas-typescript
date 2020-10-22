@@ -30,4 +30,7 @@ describe("Roman converter ", () => {
     it("should return X for 10", () => {
         expect(roman.convert(10)).toBe("X");
     })
+    it("should return XX for 20", () => {
+        expect(roman.convert(20)).toBe("XX");
+    })
 })
