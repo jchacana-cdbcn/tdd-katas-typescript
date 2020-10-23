@@ -10,6 +10,8 @@ export class Roman {
     }
 
     getNearestNumber = (num: number): number => {
+        if(num >= 100) return 100;
+        if(num >= 90) return 90;
         if(num >= 50) return 50;
         if(num >= 40) return 40
         if(num >= 10) return 10;
@@ -20,6 +22,8 @@ export class Roman {
     }
 
     getNearestSymbol = (num: number): string => {
+        if(num === 100) return "C";
+        if(num === 90) return "XC";
         if(num === 50) return "L";
         if(num === 40) return "XL";
         if(num === 10) return "X";
