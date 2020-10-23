@@ -48,4 +48,16 @@ describe("Roman converter ", () => {
     it("should return L for 50", () => {
         expect(roman.convert(50)).toBe("L");
     })
+    it("should return XC for 90", () => {
+        expect(roman.convert(90)).toBe("XC");
+    })
+    it("should return XCIX for 99", () => {
+        expect(roman.convert(99)).toBe("XCIX");
+    })
+    it("should return C for 100", () => {
+        expect(roman.convert(100)).toBe("C");
+    })
+    it("should return CI for 101", () => {
+        expect(roman.convert(101)).toBe("CI");
+    })
 })
