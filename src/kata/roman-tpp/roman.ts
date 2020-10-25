@@ -1,6 +1,7 @@
 export class RomanTPPConverter {
     convert(decimal: number) {
-        const roman = "I";
+        let roman = "I";
+        roman += "I"
         return roman;
     }
 }
