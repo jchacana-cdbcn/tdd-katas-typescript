@@ -25,4 +25,8 @@ describe("Roman TPP converter", () => {
         const romanTPPConverter = new RomanTPPConverter();
         expect(romanTPPConverter.convert(6)).toBe("VI");
     })
+    it("should return VII when converting 7", () => {
+        const romanTPPConverter = new RomanTPPConverter();
+        expect(romanTPPConverter.convert(7)).toBe("VII");
+    })
 })
