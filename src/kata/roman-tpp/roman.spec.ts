@@ -33,4 +33,16 @@ describe("Roman TPP converter", () => {
         const romanTPPConverter = new RomanTPPConverter();
         expect(romanTPPConverter.convert(8)).toBe("VIII");
     })
+    it("should return IX when converting 9", () => {
+        const romanTPPConverter = new RomanTPPConverter();
+        expect(romanTPPConverter.convert(9)).toBe("IX");
+    })
+    it("should return X when converting 10", () => {
+        const romanTPPConverter = new RomanTPPConverter();
+        expect(romanTPPConverter.convert(10)).toBe("X");
+    })
+    it("should return XL when converting 40", () => {
+        const romanTPPConverter = new RomanTPPConverter();
+        expect(romanTPPConverter.convert(40)).toBe("XL");
+    })
 })
