@@ -9,4 +9,8 @@ describe("Roman TPP converter", () => {
         const romanTPPConverter = new RomanTPPConverter();
         expect(romanTPPConverter.convert(2)).toBe("II");
     });
+    it("should return III when converting 3", () => {
+        const romanTPPConverter = new RomanTPPConverter();
+        expect(romanTPPConverter.convert(3)).toBe("III");
+    });
 })
