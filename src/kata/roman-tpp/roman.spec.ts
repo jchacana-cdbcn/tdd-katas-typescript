@@ -45,4 +45,12 @@ describe("Roman TPP converter", () => {
         const romanTPPConverter = new RomanTPPConverter();
         expect(romanTPPConverter.convert(40)).toBe("XL");
     })
+    it("should return XLV when converting 45", () => {
+        const romanTPPConverter = new RomanTPPConverter();
+        expect(romanTPPConverter.convert(45)).toBe("XLV");
+    })
+    it("should return L when converting 50", () => {
+        const romanTPPConverter = new RomanTPPConverter();
+        expect(romanTPPConverter.convert(50)).toBe("L");
+    })
 })

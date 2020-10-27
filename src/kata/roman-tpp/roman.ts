@@ -1,4 +1,5 @@
 const romanDictionary: Map<number, string> = new Map<number, string>([
+    [50, "L"],
     [40, "XL"],
     [10, "X"],
     [9, "IX"],
