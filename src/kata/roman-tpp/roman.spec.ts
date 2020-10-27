@@ -21,5 +21,10 @@ describe("Roman TPP converter", () => {
         expect(romanTPPConverter.convert(100)).toBe("C");
         expect(romanTPPConverter.convert(400)).toBe("CD");
         expect(romanTPPConverter.convert(500)).toBe("D");
+        expect(romanTPPConverter.convert(900)).toBe("CM");
+        expect(romanTPPConverter.convert(1000)).toBe("M");
+        expect(romanTPPConverter.convert(846)).toBe("DCCCXLVI");
+        expect(romanTPPConverter.convert(1999)).toBe("MCMXCIX");
+        expect(romanTPPConverter.convert(2008)).toBe("MMVIII");
     })
 })
