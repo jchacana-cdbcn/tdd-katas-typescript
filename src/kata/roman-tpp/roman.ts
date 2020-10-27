@@ -11,15 +11,12 @@ export class RomanTPPConverter {
     convert(decimal: number): string {
         if(romanDictionary.has(decimal))
             return <string>romanDictionary.get(decimal);
-        while(decimal >= 40) {
-            return romanDictionary.get(40) + this.convert(decimal - 40);
+        const keys = Array.from(romanDictionary.keys());
+        for (let key of keys) {
+            while (decimal >= key) {
+                return romanDictionary.get(key) + this.convert(decimal - key);
+            }
         }
-        while(decimal > 10) {
-            return romanDictionary.get(10) + this.convert(decimal - 10);
-        }
-        while(decimal > 5 ) {
-            return romanDictionary.get(5) + this.convert(decimal - 5);
-        }
-        return romanDictionary.get(1) + this.convert(decimal - 1)
+        return "";
     }
 }
