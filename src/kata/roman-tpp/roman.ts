@@ -20,7 +20,7 @@ export class RomanTPPConverter {
             return <string>romanDictionary.get(decimal);
         const keys = Array.from(romanDictionary.keys());
         for (let key of keys) {
-            while (decimal >= key) {
+            if (decimal >= key) {
                 return romanDictionary.get(key) + this.convert(decimal - key);
             }
         }
