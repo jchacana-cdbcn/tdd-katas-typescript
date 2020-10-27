@@ -15,15 +15,20 @@ const romanDictionary: Map<number, string> = new Map<number, string>([
 ])
 
 export class RomanTPPConverter {
+
     convert(decimal: number): string {
+        const keys = Array.from(romanDictionary.keys());
+        return this.convertRecursive(decimal, keys);
+    }
+
+    convertRecursive(decimal: number, numbers: number[]): string {
         if(romanDictionary.has(decimal))
             return <string>romanDictionary.get(decimal);
-        const keys = Array.from(romanDictionary.keys());
-        for (let key of keys) {
-            if (decimal >= key) {
-                return romanDictionary.get(key) + this.convert(decimal - key);
-            }
-        }
-        return "";
+        const key = numbers[0]
+        if(!key) return "";
+        if (decimal >= key) {
+            return romanDictionary.get(key) + this.convertRecursive(decimal - key, numbers);
+        } else
+            return this.convertRecursive(decimal, numbers.slice(1))
     }
 }
