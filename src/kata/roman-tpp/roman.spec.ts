@@ -57,4 +57,8 @@ describe("Roman TPP converter", () => {
         const romanTPPConverter = new RomanTPPConverter();
         expect(romanTPPConverter.convert(60)).toBe("LX");
     })
+    it("should return XC when converting 90", () => {
+        const romanTPPConverter = new RomanTPPConverter();
+        expect(romanTPPConverter.convert(90)).toBe("XC");
+    })
 })
