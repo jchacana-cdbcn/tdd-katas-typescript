@@ -23,29 +23,29 @@ export class Position {
 
 export class Game {
     private currentPlayerIsX: boolean = true
-    private usedPosition = new Position(-1,-1)
+    private usedPosition: Position[] = [new Position(-1,-1)]
     
     user2PlaysAt(arg0: number, arg1: number) {
         const newPosition = new Position(arg0, arg1);
-        if(this.usedPosition.equals(newPosition)){
+        if(this.usedPosition.filter( x => x.equals(newPosition)).length){
             throw new AlreadyPlayedPositionError()
         }
         if(this.currentPlayerIsX){
             throw new NotThisPlayerTurnError()
         }
         this.currentPlayerIsX = true
-        this.usedPosition = newPosition
+        this.usedPosition.push(newPosition)
     }
 
     user1PlaysAt(arg0: number, arg1: number) {
         const newPosition = new Position(arg0, arg1);
-        if(this.usedPosition.equals(newPosition)){
+        if(this.usedPosition.filter( x => x.equals(newPosition)).length){
             throw new AlreadyPlayedPositionError()
         }
         if(! this.currentPlayerIsX){
             throw new NotThisPlayerTurnError()
         }
         this.currentPlayerIsX = false
-        this.usedPosition = newPosition
+        this.usedPosition.push(newPosition)
     }
 }
